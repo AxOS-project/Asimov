@@ -1,5 +1,9 @@
 # Asimov
 
+> [!CAUTION]
+> This project is still in development and is not usable.
+
+
 Send files and texts between devices on the same network. 
 
 Made with Rust for AxOS?
