@@ -1,3 +1,8 @@
+/*
+Author: Ardox 
+CopyRight (C) 2024 Ardox
+License: MIT
+*/
 use std::{net::Ipv4Addr, path::PathBuf, sync::Arc, time::Duration};
 
 use clap::Parser;

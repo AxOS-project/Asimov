@@ -1,3 +1,9 @@
+/*
+Author: Ardox 
+CopyRight (C) 2024 Ardox
+License: MIT
+*/
+
 use std::{collections::HashMap, fmt::Write, future::Future, sync::Arc, time::Duration};
 
 use async_trait::async_trait;
