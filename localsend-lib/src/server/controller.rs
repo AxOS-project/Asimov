@@ -73,7 +73,7 @@ async fn prepare_upload(
     state: MutexServerState,
     dto: PrepareUploadRequestDto,
 ) -> Result<PrepareUploadResponseDto> {
-    log::info!("Client Addr: {}", addr);
+    println!("Client Addr: {}", addr);
 
     let mut _state = state.try_lock().map_err(|_| ReceiveError::SessionBlocked)?;
     if _state.receive_session.is_some() {
@@ -89,8 +89,8 @@ async fn prepare_upload(
     let quick_save = settings.quick_save;
     let session_id = uuid::Uuid::new_v4().to_string();
 
-    log::info!("Session Id: {}", session_id);
-    log::info!(
+    println!("Session Id: {}", session_id);
+    println!(
         "Destination Directory: {:?}, Quick Save: {}",
         destination,
         quick_save
@@ -277,7 +277,7 @@ async fn upload(
 
     let receiving_file = receiving_file.clone();
     let destination = &receive_session.destination_directory.clone();
-    log::info!(
+    println!(
         "Saving {} to {:?}",
         receiving_file.file.file_name,
         destination
@@ -352,7 +352,7 @@ async fn upload(
 
     let result = match save_result {
         Ok(_) => {
-            log::info!("File {:?} has been saved", receiving_file.file.file_name);
+            println!("File {:?} has been saved", receiving_file.file.file_name);
             receiving_file.status = FileStatus::Finished;
             Ok(())
         }

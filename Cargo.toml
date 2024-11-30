@@ -1,6 +1,6 @@
 [package]
 name = "asimov"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Ardox <ardox@axos-project.com>"]
 edition = "2021"
 license = "MIT"
